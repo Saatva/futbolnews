@@ -1,0 +1,79 @@
+.container-image {
+    img {
+        width: 100%;
+    }
+}
+
+.aside-home {
+    font-family: 'Questrial', sans-serif;
+
+    h1 {
+        padding-bottom: 20px;
+        font-size: 28px;
+
+        @include media-breakpoint-up(sm) {
+            font-size: 32px;
+        }
+
+        @include media-breakpoint-up(md) {
+            font-size: 38px;
+            padding-bottom: 30px;
+        }
+
+        @include media-breakpoint-up(lg) {
+            padding-bottom: 40px;
+        }
+    }
+
+    p {
+        font-size: 16px;
+        margin-bottom: 0;
+
+        @include media-breakpoint-up(md) {
+            font-size: 20px;
+        }
+    }
+
+    .btn {
+        margin-top: 0;
+
+        @include media-breakpoint-up(xl) {
+            margin-top: 40px;
+        }
+    }
+}
+
+.container-type-buttons {
+    flex-direction: column;
+    margin-bottom: 40px;
+    width: 100%;
+
+    @include media-breakpoint-up(xl) {
+        flex-direction: row;
+    }
+}
+
+.container-rating {
+    p {
+        margin-right: 10px;
+    }
+
+    .star-ratings {
+        bottom: 3px;
+    }
+}
+
+.container-price {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+
+    @include media-breakpoint-up(md) {
+        // margin-bottom: 30px;
+    }
+
+    @include media-breakpoint-up(xl) {
+        margin-bottom: 10px;
+    }
+}

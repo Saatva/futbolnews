@@ -1,0 +1,22 @@
+body {
+    color: $primary;
+    background-color: $tertiary !important;
+}
+
+h1, h2, h3, h4 {
+    font-family: 'Source Serif Pro', serif;
+}
+
+p {
+    font-family: 'Questrial', sans-serif;
+    font-weight: 400;
+
+    &.letter-spacing {
+        letter-spacing: 1px;
+        font-weight: bold;
+    }
+}
+
+main {
+    padding-bottom: 40px;
+}

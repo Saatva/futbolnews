@@ -1,0 +1,33 @@
+nav {
+    background-color: $primary;
+    border-bottom: 1px solid #c1bfbf;
+    margin-bottom: 60px;
+}
+
+.logo {
+    width: 130px;
+}
+
+.cart-container {
+    position: relative;
+    svg {
+        fill: $senary;
+        width: 40px;
+    }
+
+    .count {
+        background-color: $septenary;
+        border-radius: 100%;
+        color: $primary;
+        display: inline-block;
+        font-family: "Questrial", sans-serif;
+        font-size: 13px;
+        height: 20px;
+        margin: 0;
+        position: absolute;
+        right: -7px;
+        text-align: center;
+        top: 0;
+        width: 20px;
+    }
+}
