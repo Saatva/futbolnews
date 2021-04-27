@@ -1,0 +1,36 @@
+diff --git a/node_modules/react-scripts/config/modules.js b/node_modules/react-scripts/config/modules.js
+index 2282099..390873d 100644
+--- a/node_modules/react-scripts/config/modules.js
++++ b/node_modules/react-scripts/config/modules.js
+@@ -71,9 +71,17 @@ function getWebpackAliases(options = {}) {
+ 
+   const baseUrlResolved = path.resolve(paths.appPath, baseUrl);
+ 
++  const otherPaths = Object.entries(options.paths || {}).reduce((acc, [key, val]) => {
++    const relativePath = val[0].replace('/*', '/');
++    const alias = key.replace('/*', '');
++    acc[alias] = path.resolve(paths.appPath, relativePath);
++    return acc;
++  }, {});
++
+   if (path.relative(paths.appPath, baseUrlResolved) === '') {
+     return {
+       src: paths.appSrc,
++      ...otherPaths,
+     };
+   }
+ }
+diff --git a/node_modules/react-scripts/scripts/utils/verifyTypeScriptSetup.js b/node_modules/react-scripts/scripts/utils/verifyTypeScriptSetup.js
+index 949f34a..3cdc573 100644
+--- a/node_modules/react-scripts/scripts/utils/verifyTypeScriptSetup.js
++++ b/node_modules/react-scripts/scripts/utils/verifyTypeScriptSetup.js
+@@ -156,7 +156,8 @@ function verifyTypeScriptSetup() {
+           : 'react',
+       reason: 'to support the new JSX transform in React 17',
+     },
+-    paths: { value: undefined, reason: 'aliased imports are not supported' },
++    // Removed this line so I can add paths to my tsconfig file
++    // paths: { value: undefined, reason: 'aliased imports are not supported' },
+   };
+ 
+   const formatDiagnosticHost = {
