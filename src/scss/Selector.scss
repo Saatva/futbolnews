@@ -1,0 +1,39 @@
+
+@import "./App.scss";
+
+.selector {
+  border: 1px solid #d2d2d2;
+  display: grid;
+  grid-template-columns: auto auto auto;
+  height: 40px;
+  margin-bottom: 2vmin;
+}
+
+.selector > div {
+  background-color: white;
+  text-align: center;
+  display: grid;
+  align-items: center;
+  color: #685f53;
+}
+
+.selector_option {
+  color: #a6a19a;
+}
+
+.selector > div.selector_option_selected {
+  background-color: #a6a19a;
+  color: white;
+}
+
+.selector_option:hover {
+  cursor: pointer;
+}
+
+@media (max-width: $breakpoint-mobile) {
+  .selector {
+    grid-template-rows: auto auto auto;
+    grid-template-columns: none;
+    height: 100px;
+  }
+}

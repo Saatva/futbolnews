@@ -1,0 +1,77 @@
+.modal-hide {
+  display: none;
+  -webkit-animation-name: fadeOut;
+  animation-name: fadeOut;
+}
+.modal-show {
+  right: 4vmin;
+  top: 5vmin;
+  background-color: white;
+  width: 300px;
+  padding: 2vmin;
+  border-radius: 10px;
+  position: absolute;
+  box-shadow: 0px 0px 5px #afafaf;
+  transition: opacity 1s linear;
+  animation: fadeIn 1s;
+  -webkit-animation: fadeIn 1s;
+  -moz-animation: fadeIn 1s;
+  -o-animation: fadeIn 1s;
+  -ms-animation: fadeIn 1s;
+}
+.modal_container {
+  display: flex;
+  flex-direction: column;
+}
+.item_container {
+  display: flex;
+  flex-direction: row;
+  flex: 1;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-moz-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-o-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-ms-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
