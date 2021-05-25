@@ -1,0 +1,72 @@
+.Chooser-ButtonGroup {
+  display: flex;
+  justify-content: center;
+  flex: 0 3;
+  align-content: stretch;
+  flex-flow: row wrap;
+}
+
+.Chooser {
+  display: flex;
+  flex-direction: row;
+  margin: 6vh 6vw;
+}
+
+.Chooser-RightPane {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin: 0 0 0 2vw;
+}
+
+.Chooser-Button {
+  font-family: Questrial;
+  font-size: 1.25em;
+  background-color: white;
+  color: #8a837a;
+  border: 1px solid #a6a19a;
+  padding: 1vw 3vw;
+  flex: 0 1 33.3%;
+}
+
+.Chooser-RightPane-Header {
+  font-family: SourceSerifPro;
+  font-size: 3em;
+  margin: 0;
+}
+
+.Chooser-Button-Header {
+  text-transform: uppercase;
+  font-size: 1.25em;
+  padding: 8vh 0 2vh 0;
+}
+
+.Chooser-Button:disabled {
+  color: white;
+  background-color: #a6a19a;
+}
+
+.Chooser-ProductImage {
+  width: 100%;
+  height: 512px;
+}
+
+.Chooser-AddToCartButton {
+  font-family: Questrial;
+  background-color: #d4aa63;
+  font-size: 1.5em;
+  width: 100%;
+  color: white;
+  padding: 1vw;
+  border: 0;
+}
+
+@media (max-width: 800px) {
+  .Chooser {
+    flex-direction: column;
+  }
+
+  .Chooser-ProductImage {
+    width: 100%;
+  }
+}

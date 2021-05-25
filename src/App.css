@@ -1,0 +1,51 @@
+@font-face {
+  font-family: 'SourceSerifPro';
+  src: local('SourceSerifPro'), url(./fonts/SourceSerifPro-Regular.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'Questrial';
+  src: local('Questrial'), url(./fonts/Questrial-Regular.ttf) format('truetype');
+}
+
+body {
+  font-family: Questrial;
+  background-color: #f6f5f3;
+}
+
+.PageHeader {
+  background-color: #ffffff;
+  border: 1px solid white;
+  border-bottom: 1px solid darkgray;
+}
+
+.PageHeader-Content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 4vh 6vw;
+}
+
+.SaatvaLogo {
+  fill: #c19579;
+}
+
+.Cart-Image {
+  width: 32px;
+  margin-top: 1em;
+  position: relative;
+  left: 4px;
+}
+
+.Badge {
+  background-color: #c19579;
+  color: #fff;
+  font-weight: bold;
+  font-size: 80%;
+  border-radius: 10em;
+  width: 2em;
+  padding: 0.5em 0.75em;
+  text-align: center;
+  position: relative;
+  top: -24px;
+}
