@@ -1,0 +1,341 @@
+// Font Installations
+@font-face {
+  font-family: 'Source Serif Pro';
+  font-style: normal;
+  font-weight: 400;
+  src: url('./fonts/source-serif-pro-v11-latin-regular.eot'); /* IE9 Compat Modes */
+  src: local(''),
+       url('./fonts/source-serif-pro-v11-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('./fonts/source-serif-pro-v11-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
+       url('./fonts/source-serif-pro-v11-latin-regular.woff') format('woff'), /* Modern Browsers */
+       url('./fonts/source-serif-pro-v11-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('./fonts/source-serif-pro-v11-latin-regular.svg#SourceSerifPro') format('svg'); /* Legacy iOS */
+}
+
+@font-face {
+  font-family: 'Questrial';
+  font-style: normal;
+  font-weight: 400;
+  src: url('./fonts/questrial-v13-latin-regular.eot'); /* IE9 Compat Modes */
+  src: local(''),
+       url('./fonts/questrial-v13-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('./fonts/questrial-v13-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
+       url('./fonts/questrial-v13-latin-regular.woff') format('woff'), /* Modern Browsers */
+       url('./fonts/questrial-v13-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('./fonts/questrial-v13-latin-regular.svg#Questrial') format('svg'); /* Legacy iOS */
+}
+
+
+// Font Stacks
+$serif-font-stack: 'Source Serif Pro', serif;
+$sans-serif-font-stack: 'Questrial', sans-serif;
+$cart-icon-font-stack: sans-serif;
+$add-button-font-stack: 'Arial', sans-serif;
+
+
+// Colors
+$saatva-gold: #c19678;
+$border-light-grey: #d2d2d2;
+$button-light-grey: #a6a19a;
+$button-dark-grey: #6b6257;
+$button-goldenrod: #d4aa63;
+$soft-white: #f6f5f3;
+$bright-white: #ffffff;
+
+$bkgd-color: $soft-white;
+$header-bkgd: $bright-white;
+$header-border-color: $border-light-grey;
+
+$saatva-logo-color: $saatva-gold;
+$cart-icon-color: $button-dark-grey;
+$cart-icon-count-color: $saatva-gold;
+$cart-icon-text-color: $bright-white;
+
+$active-button-bkgd: $button-light-grey;
+$active-button-color: $bright-white;
+$inactive-button-bkgd: $bright-white;
+$inactive-button-color: $button-dark-grey;
+
+$add-button-bkgd: $button-goldenrod;
+
+
+// Responsive Design
+$breakpoint-desktop: 1200px;
+$breakpoint-laptop: 1024px;
+$breakpoint-tablet: 768px;
+$breakpoint-mobile: 480px;
+
+$large-image-width: 634px;
+$desktop-image-width: 500px;
+$laptop-image-width: 634px;
+$tablet-image-width: 450px;
+$mobile-image-width: 340px;
+
+$large-interface-width: 450px;
+$desktop-interface-width: 375px;
+
+@mixin respond-desktop{
+  @media (min-width: $breakpoint-laptop) and (max-width: $breakpoint-desktop) { @content }
+};
+
+@mixin respond-laptop {
+  @media (min-width: $breakpoint-tablet) and (max-width: $breakpoint-laptop) { @content }
+};
+
+@mixin respond-tablet {
+  @media (min-width: $breakpoint-mobile) and (max-width: $breakpoint-tablet) { @content }
+};
+
+@mixin respond-mobile {
+  @media (max-width: $breakpoint-mobile) { @content }
+};
+
+// Styling
+:root {
+  --final-star-width: 0;
+}
+
+html {
+  background-color: $bkgd-color;
+}
+
+.App-header {
+  background-color: $header-bkgd;
+  min-height: 64px;
+  border-bottom: solid 1px $header-border-color;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  color: white;
+}
+
+.saatvaLogo {
+  fill: $saatva-logo-color;
+  margin-left: 50px;
+  margin-top: 5px;
+  width: 107px;
+}
+
+.cartIcon {
+  display: flex;
+  margin-right: 50px;
+  text-decoration: none;
+}
+
+.icon--cart {
+  fill: $cart-icon-color;
+}
+
+.cartIconCount {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  top: -6px;
+  right: 7px;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  font-size: 9px;
+  font-family: $cart-icon-font-stack;
+  background-color: $cart-icon-count-color;
+  color: $cart-icon-text-color;
+}
+
+.mattressContent {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+
+  @include respond-laptop {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  @include respond-tablet {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  @include respond-mobile {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.imageWrapper {
+  position: relative;
+  margin-top: 18px;
+  margin-right: 20px;
+  width: $large-image-width;
+  height: 349px;
+
+  @include respond-desktop {
+    width: $desktop-image-width;
+    height: 280px;
+  }
+
+  @include respond-laptop {
+    margin-right: 0px;
+  }
+
+  @include respond-tablet {
+    width: $tablet-image-width;
+    height: 250px;
+    margin-right: 0px;
+  }
+
+  @include respond-mobile {
+    width: $mobile-image-width;
+    height: 175px;
+    margin-right: 0px;
+  }
+}
+
+.mattressImage {
+  position: absolute;
+  height: 100%;
+  width: $large-image-width;
+  object-fit: cover;
+  object-position: 0% 0%;
+
+  @include respond-desktop {
+    width: $desktop-image-width;
+  }
+
+  @include respond-tablet {
+    width: $tablet-image-width;
+  }
+
+  @include respond-mobile {
+    width: $mobile-image-width;
+  }
+
+  -webkit-transition: opacity 1s ease-in-out;
+  -moz-transition: opacity 1s ease-in-out;
+  -o-transition: opacity 1s ease-in-out;
+  transition: opacity 1s ease-in-out;
+}
+
+.mattressImage.transparent {
+  opacity: 0;
+}
+
+.mattressInterface {
+  display: flex;
+  flex-direction: column;
+  margin-left: 18px;
+  width: $large-interface-width;
+
+  @include respond-desktop {
+    width: $desktop-interface-width;
+  }
+
+  @include respond-laptop {
+    width: $laptop-image-width;
+    margin-left: 0px;
+  }
+
+  @include respond-tablet {
+    width: $tablet-image-width;
+    margin-left: 0px;
+  }
+
+  @include respond-mobile {
+    width: $mobile-image-width;
+    margin-left: 0px;
+  }
+}
+
+h2 {
+  font-family: $serif-font-stack;
+  font-size: 30px;
+  margin-top: 15px;
+}
+
+h3 {
+  font-family: $sans-serif-font-stack;
+  font-size: 14px;
+  margin-top: 16px;
+}
+
+.selectButtons {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+
+.selectButton {
+  width: 33.33%;
+  height: 42px;
+  border: 1px solid lightgray;
+  border-radius: 0px;
+  font-family: $serif-font-stack;
+  font-size: 16px;
+  margin-bottom: 25px;
+}
+
+.activeButton {
+  background-color: $active-button-bkgd;
+  color: $active-button-color;
+}
+
+.inactiveButton {
+  background-color: $inactive-button-bkgd;
+  color: $inactive-button-color;
+}
+
+.middleButton {
+  border-left: none;
+  border-right: none;
+}
+
+.mattressData {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  font-family: $serif-font-stack;
+}
+
+.review {
+  display: flex;
+  flex-direction: row;
+}
+
+.reviewStars {
+  display: flex;
+  flex-direction: row;
+  width: 100px;
+  height: 20px;
+}
+
+.reviewNumber {
+  font-family: $sans-serif-font-stack;
+}
+
+.starImg {
+  height: 100%;
+
+  &--final {
+    @extend .starImg;
+    object-fit: cover;
+    object-position: 0% 0%;
+    width: var(--final-star-width);
+  }
+}
+
+.addButton {
+  background-color: $add-button-bkgd;
+  color: $bkgd-color;
+  height: 40px;
+  border: none;
+  font-family: $add-button-font-stack;
+  font-size: 16px;
+  width: 100%;
+  margin-top: 66px;
+
+  @include respond-desktop {
+    margin-top: 25px;
+  }
+}
