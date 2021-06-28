@@ -1,0 +1,21 @@
+.cart-icon {
+  float: right;
+  fill: #6b6257;
+}
+
+.cart-icon-count {
+  align-items: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  position: absolute;
+  top: 12px;
+  right: -10px;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background-color: #c19678;
+  color: #fff;
+  font-size: 10px;
+  line-height: 1;
+  display: flex;
+}

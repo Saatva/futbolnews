@@ -1,0 +1,62 @@
+.add-to-cart-btn {
+  width: 100%;
+  color: white;
+  background-color: #d4aa63;
+  border: none;
+  padding: 8px 0px;
+  margin-top: 50px;
+}
+
+.add-to-cart-btn:hover {
+  background-color: #e2c492;
+}
+
+.product-detail {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+  font-size: 11pt;
+}
+
+.product-display-title {
+  font-family: "Source Serif Pro", serif;
+  font-size: 2rem;
+  margin-bottom: 30px;
+}
+
+.product-detail-name {
+  font-weight: 600;
+}
+
+.mattress-type-select-title {
+  font-size: 9pt;
+  font-weight: 600;
+  letter-spacing: 0.08333em;
+  text-transform: uppercase;
+  margin-bottom: 3px;
+}
+
+.product-display-container {
+  padding-top: 20px;
+}
+
+@media (max-width: 575.98px) {
+  .product-display-image-col {
+    padding: 0;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .product-display-container {
+    padding-top: 0;
+  }
+
+  .product-display-title {
+    margin-top: 10px;
+  }
+}
+
+.product-rating {
+  display: flex;
+  align-items: center;
+}

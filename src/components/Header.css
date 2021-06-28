@@ -1,0 +1,10 @@
+.header-wrapper {
+  border-bottom: #bdbdbd solid 2px;
+  background-color: white;
+}
+
+.navbar {
+  justify-content: space-between;
+  padding-left: 0;
+  padding-right: 0;
+}
