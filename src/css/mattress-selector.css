@@ -1,0 +1,34 @@
+.mattress-card .mattress-selector-container {
+  margin-bottom: 1.5rem;
+}
+
+.mattress-card .mattress-selector {
+  display: flex;
+  flex-wrap: wrap;
+  border: solid 1px #d2d2d2;
+}
+
+.mattress-card .mattress-selector-header {
+  font-weight: 600;
+  font-size: 0.9rem;
+  margin-bottom: 0.3rem;
+}
+
+.mattress-card .mattress-option {
+  flex-grow: 1;
+  color: #6b6257;
+  background-color: #fff;
+  padding: 0.6rem;
+  text-align: center;
+}
+
+.mattress-card .mattress-option:hover {
+  cursor: pointer;
+  color: #6b6257;
+  background-color: #f0efee;
+}
+
+.mattress-card .mattress-option.selected {
+  color: #fff;
+  background-color: #a6a19a;
+}

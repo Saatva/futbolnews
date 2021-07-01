@@ -1,0 +1,15 @@
+{
+  "short_name": "Saatva",
+  "name": "Saatva Mattress Shop Page",
+  "icons": [
+    {
+      "src": "favicon.png",
+      "sizes": "32x32",
+      "type": "image/png"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#fafafb",
+  "background_color": "#fafafb"
+}

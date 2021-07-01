@@ -1,0 +1,120 @@
+.mattress-card {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 1.2rem 5rem;
+}
+
+.mattress-card .image-container {
+  position: relative;
+  width: 725px;
+  min-width: 525px;
+  height: 360px;
+  margin-right: 2rem;
+  overflow: hidden;
+}
+
+.mattress-card .image-container > img {
+  position: absolute;
+  left: 0;
+  transition: opacity 1s ease-in-out;
+  transform-origin: left top;
+  transform: scale(0.6, 0.6);
+}
+
+.mattress-card .image-container > img.transparent {
+  opacity: 0;
+}
+
+.mattress-card .mattress-card-data {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  max-width: 525px;
+}
+
+.mattress-card .mattress-details {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.mattress-card .mattress-rating {
+  margin-bottom: 4rem;
+}
+
+.mattress-card .mattress-card-data > button {
+  border: none;
+  color: #fff;
+  background-color: #d5aa63;
+  border-color: #d5aa63;
+  padding: 0.5rem;
+}
+
+.mattress-card .mattress-card-data > button:hover {
+  cursor: pointer;
+  background-color: #e2c492;
+  border-color: #e2c492;
+}
+
+@media (max-width: 1245px) {
+  .mattress-card {
+    justify-content: flex-start;
+  }
+
+  .mattress-card .image-container {
+    margin-bottom: 1rem;
+  }
+
+  .mattress-card .mattress-card-data {
+    max-width: 725px;
+  }
+}
+
+@media (max-width: 950px) {
+  .mattress-card {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .mattress-card .image-container {
+    width: 544px;
+    min-width: 0;
+    height: 270px;
+    margin-right: 0;
+  }
+
+  .mattress-card .image-container > img {
+    transform: scale(0.4, 0.4);
+  }
+}
+
+@media (max-width: 650px) {
+  .mattress-card {
+    margin: 0.6rem 2.5rem;
+  }
+
+  .mattress-card .image-container {
+    width: 362px;
+    height: 180px;
+  }
+
+  .mattress-card .image-container > img {
+    transform: scale(0.3, 0.3);
+  }
+}
+
+@media (max-width: 450px) {
+  .mattress-card {
+    margin: 0.6rem 1rem;
+  }
+
+  .mattress-card .image-container {
+    width: 290px;
+    height: 144px;
+  }
+
+  .mattress-card .image-container > img {
+    transform: scale(0.2, 0.2);
+  }
+}
