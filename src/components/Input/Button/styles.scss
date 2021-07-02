@@ -1,0 +1,27 @@
+@import '../../../variables';
+
+.button-container {
+  border: none;
+  cursor: pointer;
+  font-size: 1em;
+  padding: 8px;
+  text-align: center;
+  width: 100%;
+}
+
+.normal-button {
+  background-color: $button-gold;
+  color: white;
+}
+
+.select-button {
+  background-color: white;
+  border: 1px solid $border-gray;
+  color: $button-gray;
+}
+
+.select-button-selected {
+  background-color: $button-gray;
+  border: 1px solid $border-gray;
+  color: white;
+}

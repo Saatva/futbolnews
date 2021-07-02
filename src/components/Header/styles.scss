@@ -1,0 +1,73 @@
+@import '../../variables';
+
+.header-container {
+  align-items: center;
+  background-color: white;
+  border-bottom: 1px solid $border-gray;
+  display: flex;
+  height: 64px;
+  justify-content: center;
+  margin-bottom: 16px;
+  width: 100vw;
+
+  @media screen and (max-width: 600px) {
+    position: fixed;
+    top: 0;
+  }
+}
+
+.header-sub-container {
+  align-items: center;
+  display: flex;
+  height: 100%;
+  justify-content: space-between;
+  width: 1110px;
+
+  @media screen and (max-width: 1290px) {
+    width: 680px;
+  }
+
+  @media screen and (max-width: 720px) {
+    width: 540px;
+  }
+
+  @media screen and (max-width: 600px) {
+    width: 400px;
+  }
+
+  @media screen and (max-width: 470px) {
+    width: 260px;
+  }
+}
+
+.header-logo {
+  color: $logo-brown;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2em;
+}
+
+.header-cart-container {
+  height: 32px;
+  position: relative;
+  width: 32px;
+}
+
+.header-count {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  background-color: $button-gold;
+  border-radius: 50%;
+  color: white;
+  font-size: 0.5em;
+  height: 16px;
+  position: absolute;
+  right: 0;
+  width: 16px;
+}
+
+.header-cart {
+  cursor: pointer;
+  height: auto;
+  width: 32px;
+}

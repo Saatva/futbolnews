@@ -1,0 +1,34 @@
+@import './variables';
+
+.App {
+  background-color: $background-cream;
+  height: 100vh;
+  width: 100vw;
+}
+
+.app-container {
+  margin-left: auto;
+  margin-right: auto;
+  width: 1110px;
+
+  @media screen and (max-width: 1290px) {
+    width: 680px;
+  }
+
+  @media screen and (max-width: 720px) {
+    width: 540px;
+  }
+
+  @media screen and (max-width: 600px) {
+    padding-top: 80px;
+    width: 400px;
+  }
+
+  @media screen and (max-width: 470px) {
+    width: 320px;
+  }
+
+  @media screen and (max-width: 380px) {
+    width: 280px;
+  }
+}
