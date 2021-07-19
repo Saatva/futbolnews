@@ -1,0 +1,54 @@
+@import '../../App.scss';
+
+.cart-icon {
+  @include questrial-font;
+  position: relative;
+
+  &__button {
+    background-color: transparent;
+    border: none;
+  }
+
+  &__badge {
+    position: absolute;
+    top: -10px;
+    left: 25px;    
+    background-color: #c19678;
+    color: white;
+    text-align: center;
+    font-size: 12px;
+    padding: 3px 6px 3px 6px;
+    border-radius: 9999px;
+  }
+
+  &__icon {
+    cursor: pointer;
+    height: 30px;
+    width: 30px;
+    color: black;
+  }
+
+  &__menu {
+    display: none;
+    position: absolute;
+    background: #F6F5F4;
+    top: 40px;
+    right: 0px;
+    z-index: 999;
+    width: 200px;
+    padding: 0px 15px 10px 15px;
+    min-height: 200px;
+    border: 1px solid lightgrey;
+    font-size: 14px;
+    &.active {
+      display: block;
+    }
+
+    &__row {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      margin-top: 10px;
+    }
+  }
+}

@@ -1,0 +1,118 @@
+@import '../../App.scss';
+@import 'include-media';
+
+.product-page {
+  @include page-padding;
+  padding-top: 15px;
+  display: grid;
+  
+
+  @include media(">tablet") {
+    grid-template-columns: 50% 50%;
+  }
+
+  &__col1 {
+
+    &__title {
+      @include source-serif-font;
+      font-size: 30px;
+      margin-bottom: 20px;
+      display: block;
+
+      @include media(">tablet") {
+        display: none;
+      }
+    }
+
+    &__img {
+      overflow: hidden;
+      width: 100%;
+
+      // PHOTO SCALING OPTIONS
+      object-fit: cover;
+      object-position: left center;
+      height: 200px;
+
+      @include media(">phone") {
+        object-position: -25px center;
+      }
+
+      @include media(">phone", "<=tablet") {
+        min-height: 200px;
+      }
+
+      @include media(">tablet", "<=desktop") {
+        min-height: 250px;
+      }
+      
+      @include media(">desktop") {
+        min-height: 350px;
+      }
+    }
+  }
+
+  &__col2 {
+    @include questrial-font;
+    display: flex;
+    flex-direction: column;
+    padding-left: 10px;
+    
+    @include media(">tablet") {
+      padding-left: 20px;
+    }
+    
+    &__title {
+      @include source-serif-font;
+      font-size: 30px;
+
+      display: none;
+
+      @include media(">tablet") {
+        display: block;
+      }
+    }
+
+    &__picker {
+      margin-top: 40px;
+    }
+
+    &__info {
+      margin-top: 30px;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    &__rating {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+
+      &__text {
+        font-size: 15px;
+        margin-left: 5px;
+      }
+    }
+
+    &__button {
+      margin-top: 40px;
+      border-color: #d5aa63;
+      background-color: #d5aa63;
+      border-style: solid;
+      color: white;
+      padding-top: 10px;
+      padding-bottom: 10px;
+      cursor: pointer;
+      font-size: 14px;
+
+      @include animation(background-color, border-color, color)
+
+      &:hover {
+        border-color: #e2c492;
+        background-color: #e2c492;
+      }
+    }
+
+  }
+}

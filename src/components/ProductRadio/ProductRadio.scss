@@ -1,0 +1,59 @@
+@import 'include-media';
+@import '../../App.scss';
+
+.radio-group {
+  &__title {
+    margin-bottom: 10px;
+    font-size: 14px;
+    font-weight: bold;
+  }
+}
+
+.radio-option {
+  margin-top: 10px;
+  display: flex;
+
+  &__label {
+    cursor: pointer;
+    color: #a6a19a;
+    background-color: white;
+    flex: 1;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border: 1px solid #a6a19a;
+    border-right-width: 0;
+    text-align: center;
+    font-size: 13px;
+
+    @include animation(background-color, border-color, color);
+
+    @include media(">tablet") {
+      font-size: 15px;
+    }
+    &:focus {
+      border: 3px solid blue;
+    }
+
+    // sourced from: https://stackoverflow.com/a/22462740
+    // hide radio input from screen
+    .radio-option__input {
+      position: fixed;
+      opacity: 0;
+      pointer-events: none;
+    }
+    
+    &:hover {
+      background-color: #F6F5F4;
+    }
+
+    &.selected {
+      background-color: #a6a19a;
+      color: white;
+    }
+
+    // only right most element should have border 1px
+    &:last-child {
+      border-right-width: 1px;
+    }
+  }
+}
